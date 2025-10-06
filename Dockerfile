@@ -7,7 +7,7 @@ WORKDIR /home/opam
 RUN wget https://support.bugseng.com/ppl/download/ftp/releases/1.2/ppl-1.2.tar.xz && \
   tar xfv ppl-1.2.tar.xz
 
-RUN sudo apk add m4 gmp-dev perl mpfr-dev --no-cache
+RUN sudo apk add m4 gmp-dev gmp-static perl mpfr-dev --no-cache
 
 RUN cd ppl-1.2 && \
   ./configure
